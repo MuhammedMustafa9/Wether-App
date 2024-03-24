@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whether</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="loading position-absolute w-100 h-100 z-3 d-flex justify-content-center align-items-center">
+      <i class="fas fa-spinner fa-spin-pulse fa-6x"></i>
+    </div>
+    <div class="layer"></div>
+    <header class="mt-5">
+      <div class="container">
+        <section>
+          <div class="search position-relative">
+            <div class="inner">
+              <input type="text" id="search" onkeypress="getForcast(this.value)" class="rounded-4"
+                placeholder="Search" />
+              <i class="fas fa-search position-absolute top-50 translate-middle-y"></i>
+            </div>
+          </div>
+        </section>
+        <section class="mt-3 text-center">
+          <h1 id="locationName" class="fw-bold"></h1>
+          <div>
+            <div class="d-flex align-items-center justify-content-center">
+              <img id="curentIcon" src="" />
+              <span id="temp" class=" fw-bold ms-2"></span>
+            </div>
+            <p class="lead fs-2 fw-bold" id="description"></p>
+          </div>
+        </section>
+        <section class="mt-4 text-center time">
+          <div class="inner rounded-3 m-auto">
+            <div class="heading d-flex align-items-center justify-content-center">
+              <h2 id="time" class="fs-1"></h2>
+            </div>
+            <p id="date" class="lead fs-4 mt-2"></p>
+            <div class="row mt-2 gy-3">
+              <div class="col">
+                <div class="content d-flex align-items-center">
+                  <i class="fas fa-umbrella fa-xl"></i>
+                  <p class="percentage mb-0 ms-1 fw-bold"></p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="content d-flex align-items-center">
+                  <i class="fas fa-wind fa-xl"></i>
+                  <p class="wind mb-0 ms-1"></p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="content d-flex align-items-center">
+                  <i class="far fa-compass fa-xl"></i>
+                  <p class="compas mb-0 ms-1"></p>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="mt-5 py-5">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="item rounded-3 text-center">
+                <h3 id="forcastdate" class="fs-4 fw-bold"></h3>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img id="forcastimage" src="">
+                  <span id="condtext" class=" fw-bold fs-5 "></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="item rounded-3 text-center">
+                <h3 id="forcastdate" class="fs-4 fw-bold"></h3>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img id="forcastimage" src="">
+                  <span id="condtext" class=" fw-bold fs-5 "></span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+    </header>
+  </main>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
